@@ -1,6 +1,5 @@
 specZolware
 ===========
-
 .. image:: https://travis-ci.org/zolware/specsZolware.svg?branch=master
     :target: https://travis-ci.org/zolware/specsZolware
 
@@ -9,5 +8,4 @@ specZolware
 
 Specifications for the core product.
 
-
-https://travis-ci.org/zolware/specsZolware/builds
+Online at `<https://zolware.github.io/specsZolware/>`_
