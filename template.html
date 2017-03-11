@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>[Title] &#8212; Python  documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Samples" href="samples.html" />
+    <link rel="prev" title="Contents" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="title">
+<h1>[Title]<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author(s):</th><td class="field-body">Francois Roy,
+Simon Clucas</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Date Created:</th><td class="field-body">03-11-2017</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Here is a short description of the feature.</p>
+</div>
+<div class="section" id="theory">
+<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h2>
+<p>A typical equation:</p>
+<div class="math" id="equation-eq:1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq:1" title="Permalink to this equation">¶</a></span>\[T(\mathbf{x},0)=T_0(\mathbf{x}),\qquad \textrm{at }t=0.\]</div>
+<p>Where <span class="math">\(T_0\)</span> is the initial temperature.</p>
+<div class="math" id="equation-eq:2">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq:2" title="Permalink to this equation">¶</a></span>\[\begin{split}\int_{x_1}^{x_2} \varphi_n(x)\varphi_m(x)dx = \left\{
+\begin{array}{rl}
+1 &amp; \text{if } m = n,\\
+0 &amp; \text{if } m\neq n.
+\end{array} \right.\end{split}\]</div>
+<p>Equation <a class="reference internal" href="#equation-eq:1">(1)</a> and <a class="reference internal" href="#equation-eq:2">(2)</a> have been used in <a class="reference internal" href="#polyanin2001" id="id1">[Polyanin2001]</a> to demonstrate...</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is a note.</p>
+</div>
+<p>A simple bokeh plot?</p>
+<div class="section" id="sub-theory">
+<h3>Sub-theory<a class="headerlink" href="#sub-theory" title="Permalink to this headline">¶</a></h3>
+<p>A basic table is presented in <a class="reference internal" href="#table-label"><span class="std std-numref">Table 1</span></a>.</p>
+<table border="1" class="colwidths-given docutils" id="id2">
+<span id="table-label"></span><caption><span class="caption-number">Table 1 </span><span class="caption-text"><span class="math">\(\Lambda_i\)</span> for Different Homogeneous Boundary Type.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="37%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="22%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Boundary Type</th>
+<th class="head"><span class="math">\(k_1\)</span></th>
+<th class="head"><span class="math">\(k_2\)</span></th>
+<th class="head"><span class="math">\(s_1\)</span></th>
+<th class="head"><span class="math">\(s_2\)</span></th>
+<th class="head"><span class="math">\(\Lambda_1,~x=x_1\)</span></th>
+<th class="head"><span class="math">\(\Lambda_2,~x=x_2\)</span></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Temperature, Dirichlet</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td><span class="math">\(\frac{\partial}{\partial \xi}G(x,\xi,t-\tau)\)</span></td>
+<td><span class="math">\(-\frac{\partial}{\partial \xi}G(x,\xi,t-\tau)\)</span></td>
+</tr>
+<tr class="row-odd"><td>Heat Flux, Neumann</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td><span class="math">\(-G(x,\xi,t-\tau)\)</span></td>
+<td><span class="math">\(G(x,\xi,t-\tau)\)</span></td>
+</tr>
+<tr class="row-even"><td>Convection, Robin</td>
+<td>&lt;0</td>
+<td>&gt;0</td>
+<td>1</td>
+<td>1</td>
+<td><span class="math">\(-G(x,\xi,t-\tau)\)</span></td>
+<td><span class="math">\(G(x,\xi,t-\tau)\)</span></td>
+</tr>
+<tr class="row-odd"><td>Mixed I</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td><span class="math">\(\frac{\partial}{\partial \xi}G(x,\xi,t-\tau)\)</span></td>
+<td><span class="math">\(G(x,\xi,t-\tau)\)</span></td>
+</tr>
+<tr class="row-even"><td>Mixed II</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td><span class="math">\(-G(x,\xi,t-\tau)\)</span></td>
+<td><span class="math">\(-\frac{\partial}{\partial \xi}G(x,\xi,t-\tau)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="third-party-packages">
+<h2>Third-Party Packages<a class="headerlink" href="#third-party-packages" title="Permalink to this headline">¶</a></h2>
+<p>Invoke is a <a class="reference external" href="http://www.python.org/">Python</a> (2.6+ and 3.3+) task execution tool: <a class="reference external" href="http://www.pyinvoke.org/">http://www.pyinvoke.org/</a></p>
+<p>&#8211; see <a class="reference internal" href="#deployment">Deployment</a></p>
+</div>
+<div class="section" id="architecture">
+<h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h2>
+<p>A guide for understanding what things evolved from as a project ages and grow in scope &#8211; see <a class="reference internal" href="#my-figure"><span class="std std-numref">Figure 1</span></a>.</p>
+<div class="align-center figure" id="my-figure">
+<a class="reference internal image-reference" href="_images/architecture.svg"><img alt="alternate text" height="450px" src="_images/architecture.svg" width="600px" /></a>
+<p class="caption"><span class="caption-number">Figure 1 </span><span class="caption-text">Architecture</span></p>
+</div>
+</div>
+<div class="section" id="user-interface">
+<h2>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="my-block">
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">Block caption</span><a class="headerlink" href="#my-block" title="Permalink to this code">¶</a></div>
+<div class="highlight-html"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>code block example<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<p>As refered in <a class="reference internal" href="#my-block"><span class="std std-numref">Listing 1</span></a></p>
+<p>or referencing manually <a class="reference internal" href="#my-block"><span class="std std-ref">Code 1</span></a>.</p>
+<p>other info can be downloaded <a class="reference download internal" href="_downloads/template.py" download=""><code class="xref download docutils literal"><span class="pre">template.py</span></code></a></p>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>A simple way to do it is demonstrated in &#8211; see <a class="reference internal" href="samples.html#module-samples.template"><span class="std std-ref">samples.template module</span></a></p>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="p">:</span><span class="n">param</span> <span class="n">n</span><span class="p">:</span> <span class="n">an</span> <span class="nb">input</span> <span class="n">argument</span>
+    <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    a, b = 0, 1</span>
+<span class="s2">    while b &lt; n:</span>
+<span class="s2">        print(b, end=&#39; &#39;)</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Something to do</p>
+</div>
+<p>Bullet lists:</p>
+<ul class="simple">
+<li>This is item 1</li>
+<li>This is item 2</li>
+</ul>
+<p>Enumerated lists:</p>
+<ol class="arabic simple" start="3">
+<li>This is the first item</li>
+<li>This is the second item</li>
+<li>This item is auto-enumerated</li>
+</ol>
+<p>Definition lists:</p>
+<dl class="docutils">
+<dt>what</dt>
+<dd>Definition lists associate a term with
+a definition.</dd>
+</dl>
+<p>&#8211; see <a class="reference internal" href="tests.html#module-tests.testTemplate"><span class="std std-ref">tests.testTemplate module</span></a></p>
+<p>This is a very very long text to include by substitution.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils citation" frame="void" id="polyanin2001" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[Polyanin2001]</a></td><td><a class="reference external" href="http://goo.gl/jVjUFX">Andrei D. Polyanin, Handbook of Linear Partial Differential Equations for Engineers and Scientists, Chapman and Hall/CRC 2001</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo_200.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">[Title]</a><ul>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#theory">Theory</a><ul>
+<li><a class="reference internal" href="#sub-theory">Sub-theory</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#third-party-packages">Third-Party Packages</a></li>
+<li><a class="reference internal" href="#architecture">Architecture</a></li>
+<li><a class="reference internal" href="#user-interface">User Interface</a></li>
+<li><a class="reference internal" href="#deployment">Deployment</a></li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Contents</a></li>
+      <li>Next: <a href="samples.html" title="next chapter">Samples</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Zolware Inc.
+    </div>
+    <!--
+    <div class="footer">
+      &copy;2017, Zolware Inc.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+    </div>
+
+    
+
+    -->
+
+  </body>
+</html>
