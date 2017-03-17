@@ -2,7 +2,6 @@
 import os
 import sys
 
-# sys.path.insert(0, os.path.abspath('.'))
 
 # Get the project root dir, which is the parent dir of this
 cwd = os.getcwd()
@@ -12,14 +11,16 @@ project_root = os.path.dirname(cwd)
 # This lets us ensure that the source package is imported, and that its
 # version is used.
 sys.path.insert(0, project_root)
+sys.path.insert(0, os.path.abspath('./images/'))
 
 extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.todo',
-    'sphinx.ext.autosectionlabel',
-    #'bokeh.sphinxext.bokeh_plot',
+    'sphinx.ext.graphviz',
+    'sphinxcontrib.bibtex',
+    'matplotlib.sphinxext.plot_directive'
 ]
 
 numfig = True
@@ -74,7 +75,6 @@ language = None
 # directories to ignore when looking for source files.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
 # default_role = None
@@ -109,10 +109,13 @@ todo_include_todos = True
 # a list of builtin themes.
 html_theme = 'alabaster'
 
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-# html_theme_options = {}
+html_theme_options = {'show_powered_by': False,
+                      'page_width': '1200px',
+                      'fixed_sidebar': True}
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
@@ -126,17 +129,23 @@ html_theme = 'alabaster'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = '../../figures/logo_200.png'
+html_logo = '../images/logo_200.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = '../../figures/logo.ico'
+html_favicon = '../images/logo.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['.static']
+html_static_path = ['_static']
+
+# A string of reStructuredText that will be included at the beginning of every
+# source file that is read.
+rst_prolog = """
+.. role:: red
+"""
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -152,7 +161,16 @@ html_favicon = '../../figures/logo.ico'
 # html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-# html_sidebars = {}
+html_sidebars = {
+        '**': [
+        #'about.html',
+        #'relations.html',
+        'link.html',
+        'navigation.html',
+        'localtoc.html',
+        'searchbox.html',
+    ]
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

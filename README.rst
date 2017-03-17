@@ -1,5 +1,5 @@
-specZolware
-===========
+Specification Zolware
+=====================
 .. image:: https://travis-ci.org/zolware/specsZolware.svg?branch=master
     :target: https://travis-ci.org/zolware/specsZolware
 
