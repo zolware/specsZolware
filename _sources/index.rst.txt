@@ -1,21 +1,14 @@
-Contents
-========
+======================
+Zolware Specifications
+======================
 
 .. toctree::
-   :maxdepth: 1
-
-   template
-
---------
-
-**Supporting Code Documentation**
-
-.. toctree::
-   :maxdepth: 1
-
-   samples
-   tests
-
---------
-
-`Open Project wiki <https://www.openproject.org>`_ 
+   :maxdepth: 2
+   
+   about
+   api/index
+   custom/index
+   data/index
+   general/index
+   support/index
+   zolware/index

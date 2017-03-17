@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Data Service Application &#8212; Python  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bokeh-0.12.4.min.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/bokeh-0.12.4.min.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.ico"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="General Information" href="../general/index.html" />
+    <link rel="prev" title="Architecture" href="architecture.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo_200.png" alt="Logo"/>
+            </a></p>
+<h3><a href="http://pm.zolware.com/projects/zolware-com">OpenProject</a></h3><h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Customized Service</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Data Service</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Service Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/index.html">Supporting Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zolware/index.html">Zolware&#8217;s Structure</a></li>
+</ul>
+
+
+  <h3><a href="../index.html">Page Content</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Data Service Application</a><ul>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#proposed-technology">Proposed Technology</a></li>
+<li><a class="reference internal" href="#cost-estimation">Cost Estimation</a></li>
+<li><a class="reference internal" href="#user-interface">User Interface</a></li>
+<li><a class="reference internal" href="#deployment">Deployment</a></li>
+<li><a class="reference internal" href="#testing">Testing</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="data-service-application">
+<h1>Data Service Application<a class="headerlink" href="#data-service-application" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author(s):</th><td class="field-body">Francois Roy, Simon Clucas</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Date Created:</th><td class="field-body">03-11-2017</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Language:</th><td class="field-body">C++</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Status:</th><td class="field-body"><span class="red">Draft</span></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The signal emulator service is a web application with the following component:</p>
+<ul class="simple">
+<li>A home page with a menu bar</li>
+<li>A sign In/Sign Up interface</li>
+<li>An interface to connect to data streams sent by sensors</li>
+<li>A database containing users (static) data &#8211;&gt; can be updated in real time</li>
+<li>A tool to manage dtabase storage (maximum size, download data, delete data)</li>
+<li>A sensor emulator interface that simulates different type of sensors</li>
+<li>A profile page</li>
+<li>A space to connect with other users</li>
+<li>A User settings interface</li>
+<li>An web admin interface</li>
+</ul>
+</div>
+<div class="section" id="proposed-technology">
+<h2>Proposed Technology<a class="headerlink" href="#proposed-technology" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Coding languages: Python and javascript (user interface)</li>
+<li>Back-end Framework: <a class="reference external" href="https://www.djangoproject.com">Django</a></li>
+<li>Web Servers: <a class="reference external" href="https://nginx.org/en/">Nginx</a></li>
+<li>WSGI Server: <a class="reference external" href="http://gunicorn.org">Gunicorn</a></li>
+<li>Hosting: TBD, <a class="reference external" href="https://www.heroku.com">Heroku</a> <a class="reference external" href="https://www.digitalocean.com">Digital Ocean</a>  or <a class="reference external" href="https://aws.amazon.com/ec2/">Amazon EC2</a></li>
+<li>Storage: <a class="reference external" href="https://aws.amazon.com/s3/">Amazon S3</a></li>
+<li>Templating: <a class="reference external" href="http://jinja.pocoo.org">Jinja2</a></li>
+<li>Front-end Framework: <a class="reference external" href="http://getbootstrap.com">Bootstrap</a> or <a class="reference external" href="https://semantic-ui.com">Semantic UI</a></li>
+<li>Email backend: <a class="reference external" href="https://www.mailgun.com">mailgun</a></li>
+<li>Database: <a class="reference external" href="https://www.postgresql.org">postgresql</a></li>
+<li>Unit Testing: <a class="reference external" href="http://doc.pytest.org/en/latest/">pytest</a> and <a class="reference external" href="https://tox.readthedocs.io/en/latest/">tox</a></li>
+<li>Integration testing: <a class="reference external" href="http://www.seleniumhq.org">selenium</a> + <a class="reference external" href="http://phantomjs.org">phantomJS</a></li>
+<li>Continuous integration: <a class="reference external" href="https://travis-ci.org">Travis CI</a></li>
+<li>Code coverage: <a class="reference external" href="https://codecov.io">codecov</a></li>
+<li>Countainer: <a class="reference external" href="https://www.docker.com">Docker</a></li>
+<li>SSL certificate: <a class="reference external" href="https://www.digicert.com">DigiCert</a> or another competitor.</li>
+</ul>
+</div>
+<div class="section" id="cost-estimation">
+<h2>Cost Estimation<a class="headerlink" href="#cost-estimation" title="Permalink to this headline">¶</a></h2>
+<p>Heroku (PaaS)</p>
+<blockquote>
+<div>Documentation is very good.
+Has built-in tools and architecture.
+Limited control over architecture while designing app.
+Heroku is best at what they provide.
+Deployment is taken care of (through git commands only).
+Good support.
+Not time consuming.</div></blockquote>
+<p>AWS EC2 (IaaS)</p>
+<blockquote>
+<div>AWS is versatile. They have many kinds of products. EC2, LAMBDA, EMR etc.,.
+You can go for Dedicated instance. You have more control over the architecture, like choosing OS, Version of the softwares, etc.
+Can use the automated deployment, or roll your own.
+Great support</div></blockquote>
+</div>
+<div class="section" id="user-interface">
+<h2>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2017, Zolware Inc.
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

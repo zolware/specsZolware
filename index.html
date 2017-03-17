@@ -6,10 +6,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Contents &#8212; Python  documentation</title>
+    <title>Zolware Specifications &#8212; Python  documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bokeh-0.12.4.min.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -25,10 +27,12 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/bokeh-0.12.4.min.js"></script>
     <link rel="shortcut icon" href="_static/logo.ico"/>
+    <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="[Title]" href="template.html" />
+    <link rel="next" title="About" href="about.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -37,48 +41,25 @@
 
   </head>
   <body role="document">
-  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="contents">
-<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="template.html">[Title]</a></li>
-</ul>
-</div>
-<hr class="docutils" />
-<p><strong>Supporting Code Documentation</strong></p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="samples.html">Samples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a></li>
-</ul>
-</div>
-<hr class="docutils" />
-<p><a class="reference external" href="https://www.openproject.org">Open Project wiki</a></p>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+  <div class="document">
+    
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="#">
               <img class="logo" src="_static/logo_200.png" alt="Logo"/>
-            </a></p><div class="relations">
-<h3>Related Topics</h3>
+            </a></p>
+<h3><a href="http://pm.zolware.com/projects/zolware-com">OpenProject</a></h3><h3>Navigation</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="template.html" title="next chapter">[Title]</a></li>
-  </ul></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom/index.html">Customized Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data/index.html">Data Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general/index.html">General Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support/index.html">Supporting Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zolware/index.html">Zolware&#8217;s Structure</a></li>
 </ul>
-</div>
+
+
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
@@ -91,24 +72,61 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="zolware-specifications">
+<h1>Zolware Specifications<a class="headerlink" href="#zolware-specifications" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/architecture.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/debuger.html">Dubug Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/extensions.html">Extending Python with C++ Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/linearKalmanFilter.html">The Linear Kalman Filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/profiler.html">Profiling the Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/signal.html">The Signal Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/wrapper.html">Wrapper</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="custom/index.html">Customized Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data/index.html">Data Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data/architecture.html">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/server.html">Data Service Application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="general/index.html">General Information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general/glossary.html">Glossary of Terms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="support/index.html">Supporting Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="support/snippets.html">Snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="support/tests.html">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="zolware/index.html">Zolware&#8217;s Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="zolware/architecture.html">Architecture</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
     <div class="footer">
       &copy;2017, Zolware Inc.
-    </div>
-    <!--
-    <div class="footer">
-      &copy;2017, Zolware Inc.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
     </div>
 
     
 
-    -->
-
+    
   </body>
 </html>
