@@ -1,6 +1,6 @@
-============
-Architecture
-============
+==============
+Project Layout
+==============
 
 |
 
@@ -18,29 +18,93 @@ Architecture
 -----------
 
 
-Description
------------
+Basic Directory Structure
+-------------------------
 
-The data service is a web application that allows the user to get real data and/or generate simulated signals in real time.
+The following directorystructure is considered based on the template cookiecutter-django.
 
+.. code-block:: bash
 
-Architecture
-------------
+   .
+   ├── .coveragerc
+   ├── .editorconfig
+   ├── .env
+   ├── .git
+   ├── .gitattributes
+   ├── .gitignore
+   ├── .travis.yml
+   ├── CMakeLists.txt
+   ├── CONTRIBUTORS.txt
+   ├── LICENSE
+   ├── README.rst
+   ├── zolwareCOM
+   │   ├── __init__.py
+   │   ├── data
+   │   │   ├── admin.py
+   │   │   ├── apps.py
+   │   │   ├── forms.py
+   │   │   ├── migrations
+   │   │   ├── models.py
+   │   │   ├── templatetags
+   │   │   ├── tests
+   │   │   ├── urls.py
+   │   │   └── views.py
+   │   ├── contrib
+   │   └── market
+   │   ├── media
+   │   │   └── data
+   │   ├── static
+   │   │   ├── css
+   │   │   ├── fonts
+   │   │   ├── images
+   │   │   ├── js
+   │   │   └── sass
+   │   ├── templates
+   │   │   ├── 404.html
+   │   │   ├── 500.html
+   │   │   ├── account
+   │   │   ├── base.html
+   │   │   ├── data
+   │   │   └── users
+   │   ├── tests_functional
+   │   └── users
+   │       ├── adapters.py
+   │       ├── admin.py
+   │       ├── apps.py
+   │       ├── migrations
+   │       ├── models.py
+   │       ├── tests
+   │       ├── urls.py
+   │       └── views.py
+   ├── config
+   │   ├── settings
+   │   │   ├── citest.py
+   │   │   ├── common.py
+   │   │   ├── local.py
+   │   │   ├── production.py
+   │   │   └── staging.py
+   │   ├── urls.py
+   │   └── wsgi.py
+   ├── docs
+   │   ├── CMakeLists.txt
+   │   ├── conf.py
+   │   ├── deploy.rst
+   │   ├── index.rst
+   │   ├── install.rst
+   │   └── make.bat
+   ├── manage.py
+   ├── publish-key.enc
+   ├── pytest.ini
+   ├── requirements
+   │   ├── base.txt
+   │   ├── citest.txt
+   │   ├── local.txt
+   │   ├── production.txt
+   │   └── staging.txt
+   └── setup.cfg
 
-A guide for understanding what things evolved from as a project ages and grow in scope.
+The different component are explained below:
 
-.. graphviz::
-
-   digraph Flatland {
-   
-      a -> b -> c -> g; 
-      a  [shape=polygon,sides=4,label="Signal Emulator"]
-      b  [shape=polygon,sides=5,label="Model DB (postgresql)"]
-      c  [shape=polygon,sides=6,label="Data DB (MongoDB)"]
-   
-      g [peripheries=3,color=yellow,label="Static files server"];
-      s [shape=invtriangle,peripheries=1,color=red,style=filled];
-      w  [shape=triangle,peripheries=1,color=blue,style=filled];
-      
-      }
+.. todo::
+  Comment the different components.
 

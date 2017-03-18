@@ -16,15 +16,8 @@ Architecture
 
 -----------
 
-
-Description
------------
-
-Structure of the Zolware API.
-
-
-Architecture
-------------
+Overview
+--------
 
 Simple graphviz diagram:
 
@@ -44,7 +37,8 @@ Simple graphviz diagram:
       Python -> User;
     }
 
-A typical tree structure:
+Basic Directory Structure
+-------------------------
 
 .. code-block:: bash
 
@@ -107,30 +101,6 @@ Suggested Technology
 7. Command line library: `Click <http://click.pocoo.org/5/>`_
 
 
-Deployment
-----------
-
-Github, distutils and pypy
-
-https://packaging.python.org/current/
-
-https://docs.python.org/3/distutils/index.html#distutils-index
-
-https://pypi.python.org/pypi
-
-
-Testing
--------
-
-pytest and tox.
-
-
-References
-----------
 
 
 
-
-.. Definitions
-
-.. |longtext| replace:: This is a very very long text to include by substitution.
