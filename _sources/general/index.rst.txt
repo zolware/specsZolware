@@ -7,3 +7,6 @@ General Information
    :titlesonly:
 
    glossary
+   debuger
+   extensions
+   profiler

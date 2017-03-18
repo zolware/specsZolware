@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Architecture &#8212; Python  documentation</title>
+    <title>Project Layout &#8212; Python  documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Service Application" href="server.html" />
-    <link rel="prev" title="Data Service" href="index.html" />
+    <link rel="next" title="The users App" href="usersApp.html" />
+    <link rel="prev" title="The Data Service: zolware.com" href="index.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -51,25 +51,20 @@
             </a></p>
 <h3><a href="http://pm.zolware.com/projects/zolware-com">OpenProject</a></h3><h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Customized Service</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Data Service</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="server.html">Data Service Application</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About the Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zolware/index.html">Zolware&#8217;s Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">The Computational Tool (API)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Data Service: zolware.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">The Customized Service</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general/index.html">General Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Supporting Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../zolware/index.html">Zolware&#8217;s Structure</a></li>
 </ul>
 
 
   <h3><a href="../index.html">Page Content</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Architecture</a><ul>
-<li><a class="reference internal" href="#description">Description</a></li>
-<li><a class="reference internal" href="#id1">Architecture</a></li>
+<li><a class="reference internal" href="#">Project Layout</a><ul>
+<li><a class="reference internal" href="#basic-directory-structure">Basic Directory Structure</a></li>
 </ul>
 </li>
 </ul>
@@ -90,8 +85,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="architecture">
-<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="project-layout">
+<h1>Project Layout<a class="headerlink" href="#project-layout" title="Permalink to this headline">¶</a></h1>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -110,25 +105,93 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>The data service is a web application that allows the user to get real data and/or generate simulated signals in real time.</p>
+<div class="section" id="basic-directory-structure">
+<h2>Basic Directory Structure<a class="headerlink" href="#basic-directory-structure" title="Permalink to this headline">¶</a></h2>
+<p>The following directorystructure is considered based on the template cookiecutter-django.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>.
+├── .coveragerc
+├── .editorconfig
+├── .env
+├── .git
+├── .gitattributes
+├── .gitignore
+├── .travis.yml
+├── CMakeLists.txt
+├── CONTRIBUTORS.txt
+├── LICENSE
+├── README.rst
+├── zolwareCOM
+│   ├── __init__.py
+│   ├── data
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── forms.py
+│   │   ├── migrations
+│   │   ├── models.py
+│   │   ├── templatetags
+│   │   ├── tests
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── contrib
+│   └── market
+│   ├── media
+│   │   └── data
+│   ├── static
+│   │   ├── css
+│   │   ├── fonts
+│   │   ├── images
+│   │   ├── js
+│   │   └── sass
+│   ├── templates
+│   │   ├── <span class="m">404</span>.html
+│   │   ├── <span class="m">500</span>.html
+│   │   ├── account
+│   │   ├── base.html
+│   │   ├── data
+│   │   └── users
+│   ├── tests_functional
+│   └── users
+│       ├── adapters.py
+│       ├── admin.py
+│       ├── apps.py
+│       ├── migrations
+│       ├── models.py
+│       ├── tests
+│       ├── urls.py
+│       └── views.py
+├── config
+│   ├── settings
+│   │   ├── citest.py
+│   │   ├── common.py
+│   │   ├── local.py
+│   │   ├── production.py
+│   │   └── staging.py
+│   ├── urls.py
+│   └── wsgi.py
+├── docs
+│   ├── CMakeLists.txt
+│   ├── conf.py
+│   ├── deploy.rst
+│   ├── index.rst
+│   ├── install.rst
+│   └── make.bat
+├── manage.py
+├── publish-key.enc
+├── pytest.ini
+├── requirements
+│   ├── base.txt
+│   ├── citest.txt
+│   ├── local.txt
+│   ├── production.txt
+│   └── staging.txt
+└── setup.cfg
+</pre></div>
 </div>
-<div class="section" id="id1">
-<h2>Architecture<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>A guide for understanding what things evolved from as a project ages and grow in scope.</p>
-<img src="../_images/graphviz-6778b69ce497b851e44af2db125ca1616ef64112.png" alt="digraph Flatland {
-
-   a -&gt; b -&gt; c -&gt; g;
-   a  [shape=polygon,sides=4,label=&quot;Signal Emulator&quot;]
-   b  [shape=polygon,sides=5,label=&quot;Model DB (postgresql)&quot;]
-   c  [shape=polygon,sides=6,label=&quot;Data DB (MongoDB)&quot;]
-
-   g [peripheries=3,color=yellow,label=&quot;Static files server&quot;];
-   s [shape=invtriangle,peripheries=1,color=red,style=filled];
-   w  [shape=triangle,peripheries=1,color=blue,style=filled];
-
-   }" />
+<p>The different component are explained below:</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Comment the different components.</p>
+</div>
 </div>
 </div>
 

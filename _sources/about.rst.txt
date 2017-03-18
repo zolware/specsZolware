@@ -1,7 +1,7 @@
-=====
-About
-=====
+========================
+About the Specifications
+========================
 
-The specifications are information that can't be found on the products documentations or in the business plan.
+The specifications contains information that can't be found in the products documentations or in the business plan.
 
-These information range from deployment details, structure and organigram, implementations, best practices and other internal information. 
+These information range from structure and organigram to implementations, best practices and other internal information.

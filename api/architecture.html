@@ -32,8 +32,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dubug Tools" href="debuger.html" />
-    <link rel="prev" title="API" href="index.html" />
+    <link rel="next" title="Deployment" href="deployment.html" />
+    <link rel="prev" title="The Computational Tool (API)" href="index.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -51,34 +51,22 @@
             </a></p>
 <h3><a href="http://pm.zolware.com/projects/zolware-com">OpenProject</a></h3><h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debuger.html">Dubug Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="extensions.html">Extending Python with C++ Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linearKalmanFilter.html">The Linear Kalman Filter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="profiler.html">Profiling the Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="signal.html">The Signal Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wrapper.html">Wrapper</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Customized Service</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Data Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About the Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zolware/index.html">Zolware&#8217;s Products</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">The Computational Tool (API)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">The Data Service: zolware.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">The Customized Service</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general/index.html">General Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Supporting Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../zolware/index.html">Zolware&#8217;s Structure</a></li>
 </ul>
 
 
   <h3><a href="../index.html">Page Content</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Architecture</a><ul>
-<li><a class="reference internal" href="#description">Description</a></li>
-<li><a class="reference internal" href="#id1">Architecture</a></li>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#basic-directory-structure">Basic Directory Structure</a></li>
 <li><a class="reference internal" href="#suggested-technology">Suggested Technology</a></li>
-<li><a class="reference internal" href="#deployment">Deployment</a></li>
-<li><a class="reference internal" href="#testing">Testing</a></li>
-<li><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
 </ul>
@@ -119,12 +107,8 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Structure of the Zolware API.</p>
-</div>
-<div class="section" id="id1">
-<h2>Architecture<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Simple graphviz diagram:</p>
 <img src="../_images/graphviz-c4d822ebb7b997a74fd67ea997b399fba58c17b8.png" alt="digraph G {
    subgraph cluster_0 {
@@ -139,7 +123,9 @@
    User -&gt; Python;
    Python -&gt; User;
  }" />
-<p>A typical tree structure:</p>
+</div>
+<div class="section" id="basic-directory-structure">
+<h2>Basic Directory Structure<a class="headerlink" href="#basic-directory-structure" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>.
 ├── .coverage
 ├── .coveragerc
@@ -199,20 +185,6 @@
 <li>Helper: <a class="reference external" href="https://github.com/wouterboomsma/eigency">Eigency</a></li>
 <li>Command line library: <a class="reference external" href="http://click.pocoo.org/5/">Click</a></li>
 </ol>
-</div>
-<div class="section" id="deployment">
-<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
-<p>Github, distutils and pypy</p>
-<p><a class="reference external" href="https://packaging.python.org/current/">https://packaging.python.org/current/</a></p>
-<p><a class="reference external" href="https://docs.python.org/3/distutils/index.html#distutils-index">https://docs.python.org/3/distutils/index.html#distutils-index</a></p>
-<p><a class="reference external" href="https://pypi.python.org/pypi">https://pypi.python.org/pypi</a></p>
-</div>
-<div class="section" id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
-<p>pytest and tox.</p>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

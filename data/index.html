@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Data Service &#8212; Python  documentation</title>
+    <title>The Data Service: zolware.com &#8212; Python  documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Architecture" href="architecture.html" />
-    <link rel="prev" title="Customized Service" href="../custom/index.html" />
+    <link rel="next" title="Project Layout" href="architecture.html" />
+    <link rel="prev" title="Deployment" href="../api/deployment.html" />
    
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
@@ -51,19 +51,23 @@
             </a></p>
 <h3><a href="http://pm.zolware.com/projects/zolware-com">OpenProject</a></h3><h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">Customized Service</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Service</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="architecture.html">Architecture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="server.html">Data Service Application</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About the Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zolware/index.html">Zolware&#8217;s Products</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">The Computational Tool (API)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Data Service: zolware.com</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom/index.html">The Customized Service</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../general/index.html">General Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../support/index.html">Supporting Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../zolware/index.html">Zolware&#8217;s Structure</a></li>
 </ul>
 
+
+  <h3><a href="../index.html">Page Content</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Data Service: zolware.com</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
+</ul>
 
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
@@ -81,23 +85,51 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="data-service">
-<h1>Data Service<a class="headerlink" href="#data-service" title="Permalink to this headline">¶</a></h1>
-<p>Zolware Inc. provides a data service in the form of a web application where registered users can:</p>
+  <div class="section" id="the-data-service-zolware-com">
+<h1>The Data Service: zolware.com<a class="headerlink" href="#the-data-service-zolware-com" title="Permalink to this headline">¶</a></h1>
+<p>Zolware Inc. provides a data service in the form of a set of web applications where registered users can:</p>
 <ul class="simple">
-<li>Load, enter manually, or define through functions data sets in the form of time series or other.</li>
-<li>Store their data</li>
-<li>Stream their data</li>
-<li>Update their data from a streaming source</li>
-<li>Sell or share their data with other registered user</li>
-<li>Buy or share data from other registered users</li>
-<li>Vizualize, compare, analyze and predict their data</li>
+<li>Define data sets from by loading a file, entering manually, or through Python functions.</li>
+<li>Store their data.</li>
+<li>Share their data with other registered users.</li>
+<li>Stream their data from our database to a remote server at a defined rate.</li>
+<li>Update their data on our database from a remote server at a defined rate.</li>
+<li>Sell or buy data to other registered user (digital market place).</li>
+<li>Vizualize and analyze their data.</li>
 </ul>
+<p>The data service is accesible at https:\zolware.com. Different pricing options can be considered.</p>
+<ol class="arabic simple">
+<li>Pay per use, e.g. per transaction on the market palce, per number of requests/hour, etc.</li>
+<li>Subscription plans, e.g. pay per month with different pricing options defined by access to resources.</li>
+</ol>
+<p>More details are provided in the business plan.</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The data service uses the Django web framework (Python) and is deployed on a multi-server architecture &#8211; see Deployment. For the initial phase of the project, the data service is hosted on Heroku, a popular Platefrom as a Service (PaaS) provider in the Python community. The Django project has a Service-Oriented Architecture (SOA) and is broken up into isolated independent components (apps).</p>
+<ol class="arabic simple">
+<li>The <em>users</em> app (django-allauth), taking care of registration and authentication.</li>
+<li>The <em>data</em> app for data generation, storage, and vizualization.</li>
+<li>The <em>Market</em> app for the digital market place.</li>
+</ol>
+<p>The project has different environments settings, i.e.</p>
+<ol class="arabic simple">
+<li>The <em>local</em> environment (settings for devlopement of the product).</li>
+<li>The <em>test</em> environment (settings for continuous integration, tests, and coverage).</li>
+<li>The <em>staging</em> environment (settings for a semi-private version of the site).</li>
+<li>The <em>production</em> environment (settings for the live production servers).</li>
+</ol>
+<p>These different settings use different third-party packages. The use of <em>pip</em> and <em>virtualenv</em> are needed to work on the different environments in an isolated manner. The coding style for the Python part of the project follows PEP 8. The JavaScript style still has to be defined.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="server.html">Data Service Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Project Layout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usersApp.html">The users App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataApp.html">The data App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="marketApp.html">The market App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging.html">Logging</a></li>
 </ul>
+</div>
 </div>
 </div>
 

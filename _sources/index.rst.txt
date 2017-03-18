@@ -1,14 +1,15 @@
-======================
-Zolware Specifications
-======================
+========================
+Zolware's Specifications
+========================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    about
+   zolware/index
    api/index
-   custom/index
    data/index
+   custom/index
    general/index
    support/index
-   zolware/index
+   
