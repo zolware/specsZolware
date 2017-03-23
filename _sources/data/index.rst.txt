@@ -2,7 +2,7 @@
 The Data Service: zolware.com
 =============================
 
-Zolware Inc. provides a data service in the form of a set of web applications where registered users can:
+Zolware Inc. provides a data service in the form of a web application where registered users can:
 
 - Define data sets from by loading a file, entering manually, or through Python functions.
 - Store their data.

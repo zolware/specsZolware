@@ -37,56 +37,57 @@ Simple graphviz diagram:
       Python -> User;
     }
 
-Basic Directory Structure
--------------------------
+.. Basic Directory Structure
 
-.. code-block:: bash
+.. -------------------------
 
-  .
-  ├── .coverage
-  ├── .coveragerc
-  ├── .git
-  ├── .gitignore
-  ├── .travis.yml
-  ├── CMakeLists.txt
-  ├── LICENSE
-  ├── MANIFEST.in
-  ├── README.rst
-  ├── cmake
-  │   ├── DownloadProject.cmake
-  │   ├── FindSphinx.cmake
-  │   └── ReplicatePythonSourceTree.cmake
-  ├── cmake.config
-  │   └── DownloadProject.CMakeLists.cmake.in
-  ├── include
-  │   ├── Misc.h
-  │   └── Model.h
-  ├── publish-key.enc
-  ├── pytest.ini
-  ├── requirements
-  │   ├── base.txt
-  │   └── development.txt
-  ├── setup.cfg
-  ├── setup.py
-  ├── src
-  │   └── Misc.cxx
-  ├── tests
-  │   ├── CMakeLists.txt
-  │   ├── test_Misc.cxx
-  │   ├── test_Model.cxx
-  │   ├── test_main.cxx
-  │   ├── test_model.py
-  │   ├── test_utils.py
-  │   └── test_wrapper.py
-  ├── tox.ini
-  └── zolwareAPI
-      ├── CMakeLists.txt
-      ├── __init__.py
-      ├── command_line.py
-      ├── model.py
-      ├── utils.py
-      ├── w.pxd
-      └── wrapper.pyx
+.. code-block bash
+
+..  .
+..  ├── .coverage
+..  ├── .coveragerc
+..  ├── .git
+..  ├── .gitignore
+..  ├── .travis.yml
+..  ├── CMakeLists.txt
+..  ├── LICENSE
+..  ├── MANIFEST.in
+..  ├── README.rst
+..  ├── cmake
+..  │   ├── DownloadProject.cmake
+..  │   ├── FindSphinx.cmake
+..  │   └── ReplicatePythonSourceTree.cmake
+..  ├── cmake.config
+..  │   └── DownloadProject.CMakeLists.cmake.in
+..  ├── include
+..  │   ├── Misc.h
+..  │   └── Model.h
+..  ├── publish-key.enc
+..  ├── pytest.ini
+..  ├── requirements
+..  │   ├── base.txt
+..  │   └── development.txt
+..  ├── setup.cfg
+..  ├── setup.py
+..  ├── src
+..  │   └── Misc.cxx
+..  ├── tests
+..  │   ├── CMakeLists.txt
+..  │   ├── test_Misc.cxx
+..  │   ├── test_Model.cxx
+..  │   ├── test_main.cxx
+..  │   ├── test_model.py
+..  │   ├── test_utils.py
+..  │   └── test_wrapper.py
+.. ├── tox.ini
+..  └── zolwareAPI
+..      ├── CMakeLists.txt
+..      ├── __init__.py
+..      ├── command_line.py
+..      ├── model.py
+..      ├── utils.py
+..      ├── w.pxd
+..      └── wrapper.pyx
 
 
 Suggested Technology

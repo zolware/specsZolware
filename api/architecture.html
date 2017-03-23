@@ -65,7 +65,6 @@
   <ul>
 <li><a class="reference internal" href="#">Architecture</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
-<li><a class="reference internal" href="#basic-directory-structure">Basic Directory Structure</a></li>
 <li><a class="reference internal" href="#suggested-technology">Suggested Technology</a></li>
 </ul>
 </li>
@@ -123,56 +122,6 @@
    User -&gt; Python;
    Python -&gt; User;
  }" />
-</div>
-<div class="section" id="basic-directory-structure">
-<h2>Basic Directory Structure<a class="headerlink" href="#basic-directory-structure" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>.
-├── .coverage
-├── .coveragerc
-├── .git
-├── .gitignore
-├── .travis.yml
-├── CMakeLists.txt
-├── LICENSE
-├── MANIFEST.in
-├── README.rst
-├── cmake
-│   ├── DownloadProject.cmake
-│   ├── FindSphinx.cmake
-│   └── ReplicatePythonSourceTree.cmake
-├── cmake.config
-│   └── DownloadProject.CMakeLists.cmake.in
-├── include
-│   ├── Misc.h
-│   └── Model.h
-├── publish-key.enc
-├── pytest.ini
-├── requirements
-│   ├── base.txt
-│   └── development.txt
-├── setup.cfg
-├── setup.py
-├── src
-│   └── Misc.cxx
-├── tests
-│   ├── CMakeLists.txt
-│   ├── test_Misc.cxx
-│   ├── test_Model.cxx
-│   ├── test_main.cxx
-│   ├── test_model.py
-│   ├── test_utils.py
-│   └── test_wrapper.py
-├── tox.ini
-└── zolwareAPI
-    ├── CMakeLists.txt
-    ├── __init__.py
-    ├── command_line.py
-    ├── model.py
-    ├── utils.py
-    ├── w.pxd
-    └── wrapper.pyx
-</pre></div>
-</div>
 </div>
 <div class="section" id="suggested-technology">
 <h2>Suggested Technology<a class="headerlink" href="#suggested-technology" title="Permalink to this headline">¶</a></h2>
